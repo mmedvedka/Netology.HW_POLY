@@ -30,4 +30,14 @@ public class Company {
         debit = 0;
         credit = 0;
     }
+
+    public int applyDeals(Deal[] deals){
+        for (Deal deal : deals) {
+            debit += deal.getDebitChange();
+            credit += deal.getCreditChange();
+        }
+        int delta = debit - credit;
+        payTaxes();
+        return delta;
+    }
 }
