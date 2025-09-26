@@ -14,6 +14,12 @@ public class Main {
             new Sale("Нож", 750),
             new Expenditure("Салатница", 300)
         };
+
+        System.out.println("Товары:");
+        for (Deal deal : deals) {
+            System.out.println(deal.toString());
+        };
+
         System.out.println();
         System.out.println("УСН доходы — налог 6% от доходов:");
         System.out.println("Разница доходов и расходов: " + company.applyDeals(deals));
